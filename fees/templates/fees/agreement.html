@@ -1,0 +1,85 @@
+{% extends 'account/base.html' %}
+
+{% block content %}
+<!-- <h2>اتفاقية الاستخدام</h2>
+<h5>{{ error }}</h5> -->
+
+<div class="container-fluid  text-right">
+  <!-- <div class="row justify-content-center mt-5">
+      <div class="col-md-5 ">
+          <h3> تعليمات استخدام الباص</h3>
+      </div>
+  </div> -->
+  <div class="row justify-content-center  mt-5">
+      <div class="col-md-5">
+
+          <div class="row">
+            <div class="col-md-12 ml-auto">
+              <div id="card-434025">
+                <div class="card">
+                  <div class="card-header">
+                     <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-434025" href="#card-element-708669">تعليمات إستخدام الباص</a>
+                  </div>
+                  <div id="card-element-708669" class="collapse">
+                    <div class="card-body">
+                      Anim pariatur cliche...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% if error %}
+              <div class="alert alert-danger mt-3" role="alert">
+                  {{ error }}
+              </div>
+          {% endif %}
+          <form method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <!-- {{ form.kind }} -->
+                  <label for="old_bus" class="mt-3">: كود باص العام السابق إن وجد</label>
+                    <select name="old_bus" class="form-control" id="id_old_bus">
+                      <option value="" selected=""></option>
+
+                      <option value="1001">1001</option>
+
+                      <option value="1002">1002</option>
+
+                      <option value="1003">1003</option>
+
+                      <option value="1004">1004</option>
+
+                      <option value="1005">1005</option>
+
+                    </select>
+              </div>
+              <div class="form-group">
+                <!-- {{ form.value }} -->
+                  <label for="area">: المنطقة السكنية</label>
+                  <select name="area" class="form-control" id="id_area" required="">
+                    <option value="" selected=""></option>
+
+                    <option value="aa">التجمع الخامس</option>
+
+                    <option value="ab">مدينة نصر</option>
+
+                    <option value="ac">القاهرة الجديدة</option>
+
+                    <option value="ad">مصر الجديدة</option>
+
+                  </select>
+              </div>
+              <div class="form-group">
+                <!-- {{ form.bank_account }} -->
+                  <label for="adress">: العنوان</label>
+                    <input type="text" name="adress" class="form-control" maxlength="20" id="id_adress" required="">
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-5 cib">اوافق علي التعليمات</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+{% endblock %}
