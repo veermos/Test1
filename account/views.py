@@ -5,17 +5,17 @@ from django.contrib.auth import login, logout, authenticate
 from django.db.models import Sum
 def loginuser(request):
     if request.method == 'GET':
-        return render(request, 'account/loginuser.html', {'form':AuthenticationForm})
+        return render(request, 'account/home.html', {'form':AuthenticationForm})
     else:
         user = authenticate(request, code=request.POST['username'],password=request.POST['password'])
         if user is None:
-            return render(request, 'account/loginuser.html', {'form':AuthenticationForm, 'error':'برجاء التأكد من الكود وكلمة المرور'})
+            return render(request, 'account/home.html', {'form':AuthenticationForm, 'error':'برجاء التأكد من الكود وكلمة المرور'})
         else:
             login(request, user)
             return redirect('dashboard')
 
-def home(request):
-    return render(request, 'account/home.html')
+# def home(request):
+#     return render(request, 'account/home.html')
 
 def logoutuser(request):
     if request.method == 'POST':
