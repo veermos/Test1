@@ -6,34 +6,52 @@
 <!-- <div class="container-fluid  text-right">
   <div class="row justify-content-center mt-5"> -->
 
-<div class="container-fluid ">
+<div class="container-fluid bg-light">
+
+
+
+  <br>
+  <br>
+  <br>
   <div class="row ">
     <div class="col-md-8  ">
     </div>
-    <div class="col-md-4  mb-2 text-right">
+    <div class="col-md-4  mb-3 text-right">
       <h5>المصروفات المسجلة</h5>
     </div>
   </div>
 
-  <div class="row "
+  <div class="row"
   <div class="col-md-7 ">
   </div>
-    <div class="col-md-5 ml-auto text-center ">
+    <div class="col-md-5 ml-auto text-center">
   		<table class="table table-hover">
   		  <thead>
   		    <tr>
-  		      <th scope="col">تاريخ التسجيل</th>
+
+  		      <th scope="col">التاريخ</th>
             <th scope="col">المبلغ</th>
+            <th scope="col">مصروفات</th>
   		    </tr>
   		  </thead>
   		  <tbody>
            {% for fees in feess %}
   		    <tr>
-  		      <td>{{ fees.created }}</td>
+
+  		      <td>{{ fees.payment_date }}</td>
             <th scope="row">{{ fees.value }}</th>
+            <td>{{ fees.kind }}</td>
            {% endfor %}
   		  </tbody>
   		</table>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
+
 {% endblock %}

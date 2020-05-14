@@ -20,8 +20,8 @@ from account import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('login/', views.loginuser, name='loginuser'),
+    path('', views.loginuser, name='home'),
+    # path('login/', views.loginuser, name='loginuser'),
     path('logout/', views.logoutuser, name='logoutuser'),
     path('fees/', include('fees.urls')),
 ]

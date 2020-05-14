@@ -4,8 +4,9 @@
 {% load static %}
 <link rel="stylesheet" href="{% static '/css/base.css' %}">
 
-<div class="container-fluid text-right">
-
+<div class="container-fluid text-right bg-light">
+<br>
+<br>
 	<div class="row">
 		<div class="col-md-1">
 		</div>
@@ -29,7 +30,7 @@
 		<!-- <div class="col-md-1">
 		</div> -->
 		<div class="col-md-5">
-			<div class="card text-wight cib">
+			<div class="card text-right cib">
 				<h6 class="card-header">
           {% if user.school == "بنين" %}
            مرحباً بالطالب
@@ -49,14 +50,14 @@
 			</div>
 		</div>
 </div>
-<br>
 
 
 <div class="container-fluid text-right ml-auto">
-	<div class="row ">
-		<div class="col-md-7" >
-		</div>
-		<div class="col-md-5">
+
+		<div class="row ">
+			<div class="col-md-8" >
+				</div>
+		<div class="col-md-4 mt-4">
 	  <h6>بيان سداد المصروفات الدراسية</h6>
 		<hr>
 	  </div>
@@ -64,6 +65,7 @@
 	<div class="row ">
 		<div class="col-md-8" >
 		</div>
+
 		<div class="col-md-4" >
 		  <button type="button" class="btn btn-primary cib mb-1" style="display:inline-block; width:230px" >قيمة القسط الأول<span class="badge badge-light ml-2"><h6>{{ user.payment_1 }}</h6></span></button>
 		</div>
@@ -94,7 +96,6 @@
 		</div>
 	</div>
   <br>
-	<br>
 
 
 	{% if user.bus_active  %}
@@ -134,21 +135,17 @@
 	</div>
 	{% endif %}
 </div>
-
-
-
-  <br>
-	<br>
-	<div class="text-right">
-
-
-	<form class="" action="{% url 'addfees' %}" method="GET">
-	  <button type="submit" name="button" >تسجيل إيصالات البنك</button>
-	</form>
-
+<br>
+<div class="row ">
+	<div class="col-md-8" >
+		</div>
+	<div class="col-md-4" >
+		<form class="btn"  action="{% url 'addfees' %}" method="GET">
+			<button type="submit" name="button" >تسجيل إيصالات البنك</button>
+		</form>
 	</div>
-	<br>
-	<br>
+	</div>
+<br>
   <div class="row">
 		<div class="col-md-8 ml-auto">
 			<div id="card-434025">
@@ -162,26 +159,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="card">
-					<div class="card-header">
-						 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-434025" href="#card-element-651084">تعليمات الإشتراك في الباص</a>
-					</div>
-					<div id="card-element-651084" class="collapse">
-						<div class="card-body">
-							Anim pariatur cliche...
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 </div>
-<hr>
-<div class="container-fluid text-right">
-<div class="row">
-
-
-</div>
+<br>
 </div>
 
 
